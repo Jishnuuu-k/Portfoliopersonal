@@ -64,6 +64,19 @@
   display: flex;
   gap: 20px;
 }
+.cv-btn{
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.cv-btn:hover {
+  background-color: rgba(255,255,255,0.2);
+}
 
 .social-links a {
   text-decoration: none;

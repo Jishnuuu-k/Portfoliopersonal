@@ -3,7 +3,7 @@ import './banner.css';
 
 function Banner() {
   return (
-    <div className="banner parallax">
+    <div id='home' className="banner parallax">
       <div className="banner-content">
         <div className="profile-image">
           <img src="../../public/images/1177.jpg" alt="Jishnu K" />
@@ -15,9 +15,8 @@ function Banner() {
           <p>Full Stack Developer | React Enthusiast | Node.js Specialist</p>
           
           <div className="social-links">
-            <a href="https://github.com/Jishnuuu-k " target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com/in/jishnu-k-b14841278" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://www.instagram.com/speedmonn?igsh=MXd6bTJsZWd4YTRpaw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <button className="cv-btn">Hire Me</button>
+            <a href="hhttps://wa.me/7902286179?text=Hello!%20I%20visited%20your%20portfolio!" target="_blank" rel="noopener noreferrer">Get In Touch</a>
           </div>
         </div>
       </div>
