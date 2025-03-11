@@ -1,266 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-   }
-   
-   .banner {
-     width: 100%;
-     min-height: 100vh;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     color: #ffffff;
-     padding: 20px;
-     box-sizing: border-box;
-     position: relative;
-     overflow: hidden; /* Prevent horizontal scrollbar when model moves */
-   }
-   
-   .banner-content {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     max-width: 1200px;
-     width: 100%;
-     gap: 50px;
-     position: relative;
-     z-index: 2; /* Ensure content stays above the model */
-   }
-   
-   .profile-image {
-     width: 300px;
-     height: 300px;
-     border-radius: 50%;
-     overflow: hidden;
-     border: 5px solid #ffffff;
-     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-   }
-   
-   .profile-image img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-   }
-   
-   .banner-text {
-     max-width: 500px;
-   }
-   
-   .banner-text h1 {
-     font-size: 48px;
-     margin-bottom: 10px;
-     color: #ffffff;
-   }
-   
-   .banner-text h2 {
-     font-size: 24px;
-     margin-bottom: 15px;
-     color: #b0b0b0;
-   }
-   
-   .banner-text p {
-     font-size: 16px;
-     margin-bottom: 25px;
-     line-height: 1.6;
-     color: #d0d0d0;
-   }
-   
-   .social-links {
-     display: flex;
-     gap: 20px;
-   }
-   
-   .cv-btn {
-     cursor: pointer;
-     text-decoration: none;
-     border: none;
-     color: #ffffff;
-     padding: 10px 15px;
-     background-color: rgba(255,255,255,0.1);
-     border-radius: 5px;
-     transition: background-color 0.3s ease;
-   }
-   
-   .cv-btn:hover {
-     background-color: rgba(255,255,255,0.2);
-   }
-   
-   .social-links a {
-     text-decoration: none;
-     color: #ffffff;
-     padding: 10px 15px;
-     background-color: rgba(255,255,255,0.1);
-     border-radius: 5px;
-     transition: background-color 0.3s ease;
-   }
-   
-   .social-links a:hover {
-     background-color: rgba(255,255,255,0.2);
-   }
-   
-   /* Model container styling */
-   .model-container {
-     position: absolute;
-     width: 300px;
-     height: 300px;
-     top: 50%;
-     right: 10%;
-     z-index: 1; /* Ensure model goes under content when scrolling */
-     transform: translateY(-50%);
-     transition: transform 0.05s ease-out; /* Smoother animation */
-     pointer-events: none; /* Allows clicking through model */
-   }
-   
-   /* Responsive Design */
-   @media (max-width: 768px) {
-     .banner-content {
-       flex-direction: column;
-       text-align: center;
-       gap: 30px;
-     }
-   
-     .social-links {
-       justify-content: center;
-     }
-     
-     .model-container {
-       position: relative;
-       top: 0;
-       right: 0;
-       transform: none;
-       margin: 0 auto;
-     }
-   }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
 
 
-
-   /* ABOUT PAGE */
-
-
-
-
-   /* aboutme.css */
-
-.aboutme-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  color: #e0e6eb;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.aboutme-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.aboutme-header h1 {
-  font-size: 2.5rem;
-  color: #ffffff;
+.Landingpage-Container{
+  height: 100vh;
   position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
 }
-
-.aboutme-header h1::after {
-  content: '';
+.Text-Container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.Text-Container .Bitext-Container h1{
+  font-size: 60px;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  transition: transform 0.3s ease-in-out;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.Text-Container .Bitext-Container h3{
+  font-size: 20px;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.Text-Container .Bitext-Container .Typeanimation{
+  font-size: 16px;
+  font-family: 'Orbitron', sans-serif;
+}
+.leaf{
   position: absolute;
-  bottom: 0;
-  left: 25%;
-  width: 50%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #64b5f6, transparent);
 }
 
-.aboutme-content {
-  display: block;
-}
 
-.aboutme-text p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  text-align: justify;
-}
 
-.aboutme-skills-section, .aboutme-contact-section {
-  margin-top: 40px;
-}
-
-.aboutme-skills-section h2, .aboutme-contact-section h2 {
-  font-size: 1.8rem;
-  color: #90caf9;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 10px;
-}
-
-.aboutme-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.skill-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.skill-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
-}
-
-.aboutme-contact {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.contact-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: rgba(100, 181, 246, 0.2);
-  color: #e0e6eb;
-  text-decoration: none;
-  border-radius: 5px;
-  border: 1px solid rgba(100, 181, 246, 0.4);
-  transition: all 0.3s ease;
-}
-
-.contact-link:hover {
-  background-color: rgba(100, 181, 246, 0.4);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  .aboutme-header h1 {
-    font-size: 2rem;
-  }
-  
-  .aboutme-text p {
-    font-size: 1rem;
-  }
-  
-  .aboutme-contact {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .contact-link {
-    text-align: center;
-  }
-}
-.mountain{
-    bottom: 0px;
-    height: 500px;
-    width: 100%;
-    position: absolute;
+.aboutme-container{
+  min-height: 100vh;
 }
