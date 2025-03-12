@@ -1,5 +1,6 @@
 import React from "react";
 import './App.css';
+import Header from "./header/Header";
 import { Parallax } from 'react-parallax';
 import { TypeAnimation } from 'react-type-animation';
 import bgImage from '../public/images/bgImage.jpg'
@@ -18,6 +19,7 @@ import github from '../public/images/github.png'
 import social from '../public/images/social.png'
 
 function App() {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="App">
       {/* Hero Section */}
@@ -26,7 +28,8 @@ function App() {
         strength={500}
         bgImageStyle={{ height: "100%", width: "100%" }}
       >
-        <div className="hero-container">
+        <Header/>
+        <div className="hero-container" id="home">
           <div className="hero-content">
             <h1 className="main-title">JISHNU K</h1>
             <div className="type-container">
@@ -87,16 +90,24 @@ function App() {
           <div className="section-container">
             <h2 className="section-title">SKILLS</h2>
             <div className="skills-container">
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
-              <div className="skillbox"></div>
+              <div className="skillbox skillbox1"><img src={react} alt="" /></div>
+              <div className="skillbox skillbox2"><img src={mongodb} alt="" /></div>
+              <div className="skillbox skillbox3"><img src={nodejs} alt="" /></div>
+              <div className="skillbox skillbox4"><img src={express} alt="" /></div>
+              <div className="skillbox skillbox5"><img src={java} alt="" /></div>
+              <div className="skillbox skillbox6"><img src={html} alt="" /></div>
+              <div className="skillbox skillbox7"><img src={css} alt="" /></div>
+              <div className="skillbox skillbox8"><img src={github} alt="" /></div>
+            </div>
+            <div className="skills-container">
+              <div className="skillbox skillbox1"><img src={react} alt="" /></div>
+              <div className="skillbox skillbox2"><img src={mongodb} alt="" /></div>
+              <div className="skillbox skillbox3"><img src={nodejs} alt="" /></div>
+              <div className="skillbox skillbox4"><img src={express} alt="" /></div>
+              <div className="skillbox skillbox5"><img src={java} alt="" /></div>
+              <div className="skillbox skillbox6"><img src={html} alt="" /></div>
+              <div className="skillbox skillbox7"><img src={css} alt="" /></div>
+              <div className="skillbox skillbox8"><img src={github} alt="" /></div>
             </div>
           </div>
         </section>
@@ -167,13 +178,13 @@ function App() {
                     <div className="contact-icon">
                       <img src={mail} alt="Email" />
                     </div>
-                    <p>email@example.com</p>
+                    <p>im.jishnuu@gmail.com</p>
                   </div>
                   <div className="contact-method">
                     <div className="contact-icon">
                       <img src={phone} alt="Phone" />
                     </div>
-                    <p>+1 (123) 456-7890</p>
+                    <p>+91 7902286179</p>
                   </div>
                 </div>
                 <div className="social-links">
@@ -208,11 +219,10 @@ function App() {
       </Parallax>
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          <p>© 2025 | DESIGNED & BUILT WITH ATTITUDE</p>
-        </div>
-      </footer>
+      <div className="footer-bottom">
+        <p className="copyright">© {currentYear}  All rights reserved.</p>
+        <p className="attribution">Designed and Developed with <span className="heart">♥</span> by <a href="https://www.instagram.com/speedmonn?igsh=MXd6bTJsZWd4YTRpaw==" className='instalink'>speedmon</a></p>
+      </div>
     </div>
   );
 }
