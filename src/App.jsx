@@ -24,6 +24,7 @@ import mail from '../public/images/mail.png'
 import linkedin from '../public/images/linkedin.png'
 import github from '../public/images/github.png'
 import social from '../public/images/social.png'
+import Whatsapp from "./Components/Whatsapp/Whatsapp";
 
 // Navigation items array for cleaner code
 const navItems = [
@@ -100,7 +101,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/clients/clientmessage", {
+      const response = await fetch("https://portfolio-pag9.onrender.com/clients/clientmessage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -124,6 +125,7 @@ function App() {
 
   return (
     <div className="App">
+      <Whatsapp/>
       {/* NAVBAR - Added dynamic className based on scroll state */}
       <div className={`NavigationBar ${isScrolled ? 'transparent' : ''}`}>
         <div className="Nav-options-container">
