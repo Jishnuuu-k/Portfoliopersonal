@@ -12,6 +12,7 @@ import bgImage2 from '../public/images/bgImage2.jpg'
 import bgImage3 from '../public/images/bgImage3.jpg'
 import toji from '../public/images/toji.jpeg'
 import project1 from '../public/images/project1.png'
+import project2 from '../public/images/project2.webp'
 import css from '../public/images/css.png'
 import express from '../public/images/expressjs.png'
 import html from '../public/images/html.png'
@@ -44,6 +45,7 @@ const skills = [
   { name: 'Node.js', icon: nodejs, color: '#339933' },
   { name: 'Express', icon: express, color: '#000000' },
   { name: 'MongoDB', icon: mongodb, color: '#47A248' },
+  { name: 'github', icon: github, color: '#000000' },
 ];
 
 // Project data for cleaner rendering
@@ -58,10 +60,10 @@ const projects = [
     isReverse: false
   },
   {
-    name: "NOVA AI ASSISTANT",
-    image: toji, // You might want to change this to a proper image
-    description: "An intelligent AI-powered assistant that helps users with daily tasks and information.",
-    tech: ["React", "Node.js", "MongoDB", "AI/ML"],
+    name: "SCRAP SALES",
+    image: project2, // You might want to change this to a proper image
+    description: "An E-Commerce Website ",
+    tech: ["React", "Node.js", "MongoDB", "Express"],
     demoLink: "#",
     codeLink: "#",
     isReverse: true
