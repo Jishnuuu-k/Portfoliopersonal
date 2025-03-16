@@ -12,7 +12,7 @@ import bgImage2 from '../public/images/bgImage2.jpg'
 import bgImage3 from '../public/images/bgImage3.jpg'
 import toji from '../public/images/toji.jpeg'
 import project1 from '../public/images/project1.png'
-import project2 from '../public/images/project2.webp'
+import project2 from '../public/images/project2.png'
 import css from '../public/images/css.png'
 import express from '../public/images/expressjs.png'
 import html from '../public/images/html.png'
@@ -60,9 +60,9 @@ const projects = [
     isReverse: false
   },
   {
-    name: "SCRAP SALES",
+    name: "CHARM CRAFTS",
     image: project2, // You might want to change this to a proper image
-    description: "An E-Commerce Website ",
+    description: "E-Commerce ",
     tech: ["React", "Node.js", "MongoDB", "Express"],
     demoLink: "#",
     codeLink: "#",
@@ -152,6 +152,7 @@ function App() {
         <div className="hero-container" id="home">
           <div className="hero-content">
             <h1 className="main-title">JISHNU K</h1>
+            <h3>WEB DEVELOPER</h3>
             <div className="type-container">
               <TypeAnimation
                 sequence={[
@@ -160,8 +161,6 @@ function App() {
                   'FRONTEND SPECIALIST',
                   2000,
                   'BACKEND ENGINEER',
-                  2000,
-                  'PROBLEM SOLVER',
                   2000
                 ]}
                 wrapper="div"
