@@ -5,6 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { IoIosHome } from "react-icons/io";
 import { FcAbout } from "react-icons/fc";
+import { SiHyperskill } from "react-icons/si";
 import { GrProjects } from "react-icons/gr";
 import { IoMdContact } from "react-icons/io";
 import bgImage1 from '../public/images/bgImage1.jpg'
@@ -31,6 +32,7 @@ import Whatsapp from "./Components/Whatsapp/Whatsapp";
 const navItems = [
   { id: 'home', icon: IoIosHome },
   { id: 'about', icon: FcAbout },
+  { id: 'Skills', icon: SiHyperskill },
   { id: 'projects', icon: GrProjects },
   { id: 'contact', icon: IoMdContact },
   { id: 'footer', icon: IoMdContact }
@@ -205,7 +207,7 @@ function App() {
         strength={700}
         bgImageStyle={{ height: "100%", width: "100%" }}
       >
-        <section id="skills" className="skills-section">
+        <section id="Skills" className="skills-section">
           <div className="skill-section-container">
             <div className="Skill-wheel">
               <motion.h2 
@@ -332,7 +334,7 @@ function App() {
                     <img src={linkedin} alt="LinkedIn" />
                   </a>
                   <a href="https://www.instagram.com/speedmonn?igsh=MXd6bTJsZWd4YTRpaw==" className="social-link" target="_blank" rel="noopener noreferrer">
-                    <img src={social} alt="Instagram" />
+                    <img src={social} alt="Instagram" className="insta"/>
                   </a>
                 </div>
               </div>
