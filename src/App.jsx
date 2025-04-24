@@ -58,16 +58,16 @@ const projects = [
     description: "A comprehensive table booking system for restaurants.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
     demoLink: "https://bookmytablee.netlify.app/",
-    codeLink: "#",
+    codeLink: "https://github.com/Jishnuuu-k/Tablebooking-UI",
     isReverse: false
   },
   {
-    name: "CHARM CRAFTS",
+    name: "MOTO HUB",
     image: project2, // You might want to change this to a proper image
-    description: "E-Commerce ",
+    description: "E-Commerce  website  designed for selling motorcycle accessories online. Users can browse, select, and purchase various bike-related products such as helmets, lights, and riding gear. ",
     tech: ["React", "Node.js", "MongoDB", "Express"],
-    demoLink: "#",
-    codeLink: "#",
+    demoLink: "https://github.com/Jishnuuu-k/e-commerce",
+    codeLink: "https://github.com/Jishnuuu-k/e-commerce-backend",
     isReverse: true
   }
 ];
@@ -75,6 +75,8 @@ const projects = [
 function App() {
   const currentYear = new Date().getFullYear();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isNavVisible, setIsNavVisible] = useState(false);
+  const [scrollTimer, setScrollTimer] = useState(null);
   const [activeSkill, setActiveSkill] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -82,19 +84,42 @@ function App() {
     message: ""
   });
 
-  // Add scroll event listener to track scroll position
+  // Add scroll event listener to track scroll position and control nav visibility
   useEffect(() => {
+    let lastScrollTop = 0;
+    let scrollTimeout;
+
     const handleScroll = () => {
       // Check if page is scrolled more than 50px
-      setIsScrolled(window.scrollY > 50);
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+      
+      // Show navigation when scrolling
+      setIsNavVisible(true);
+      
+      // Clear previous timeout if exists
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      
+      // Set new timeout to hide navigation after 3 seconds of no scrolling
+      scrollTimeout = setTimeout(() => {
+        setIsNavVisible(false);
+      }, 3000);
+      
+      // Update last scroll position
+      lastScrollTop = scrollTop;
     };
 
     // Add event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up event listener
+    // Clean up event listener and timeout
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
     };
   }, []);
 
@@ -130,8 +155,8 @@ function App() {
   return (
     <div className="App">
       <Whatsapp/>
-      {/* NAVBAR - Added dynamic className based on scroll state */}
-      <div className={`NavigationBar ${isScrolled ? 'transparent' : ''}`}>
+      {/* NAVBAR - Added animation classes based on visibility state */}
+      <div className={`NavigationBar ${isScrolled ? 'transparent' : ''} ${isNavVisible ? 'nav-visible' : 'nav-hidden'}`}>
         <div className="Nav-options-container">
           {navItems.map((item, index) => (
             <div 
@@ -178,6 +203,8 @@ function App() {
         </div>
       </Parallax>
 
+      {/* Rest of the component remains the same */}
+      
       {/* About Section */}
       <section id="about" className="about-section">
         <div className="section-container">

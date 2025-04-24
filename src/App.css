@@ -59,6 +59,36 @@ body {
   transition: transform 0.5s ease, background-color 0.3s ease;
 }
 
+.NavigationBar.nav-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Hidden state - navbar is out of view (off-screen to the right) */
+.NavigationBar.nav-hidden {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+/* When it's visible, add a subtle animation to the icons */
+.nav-visible .Navoptions-links {
+  animation: fadeIn 0.5s forwards;
+  animation-delay: calc(0.1s * var(--item-index));
+  opacity: 0;
+}
+
+/* Animation for the navbar items to fade in one by one when the navbar becomes visible */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 
+
 .NavigationBar.transparent {
   background-color: transparent;
 }
@@ -1059,6 +1089,37 @@ section {
   
   .project-info p {
     font-size: 1rem;
+  }
+  @media (max-width: 576px) {
+    .skills-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 10px;
+    }
+    
+    .skill-card {
+      padding: 10px;
+    }
+    
+    .skill-icon-container {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    
+    .skill-name {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    
+    .skill-details p {
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+    }
+    
+    .skill-bar {
+      height: 6px;
+      margin-top: 8px;
+    }
   }
 }
 
