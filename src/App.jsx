@@ -172,7 +172,7 @@ function App() {
               />
             </div>
             <div className="cta-container">
-              <a href="#about" className="cta-button">DISCOVER</a>
+              <a href="#about" className="cta-button">CHECK OUT</a>
             </div>
           </div>
         </div>
