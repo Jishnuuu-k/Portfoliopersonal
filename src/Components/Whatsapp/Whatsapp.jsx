@@ -5,7 +5,7 @@ function Whatsapp() {
   return (
     <div className="whatsapp-container">
       <a 
-        href="https://wa.me/7902286179" 
+        href="https://wa.me/7902286179?text=Hi%2C%20I%20have%20seen%20your%20website" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="whatsapp-icon"
