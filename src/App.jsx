@@ -203,9 +203,7 @@ function App() {
         </div>
       </Parallax>
 
-      {/* Rest of the component remains the same */}
-      
-      {/* About Section */}
+
       <section id="about" className="about-section">
         <div className="section-container">
           <h2 className="section-title">ABOUT ME</h2>
@@ -218,7 +216,7 @@ function App() {
                 I am a passionate MERN Stack Web Developer with a strong foundation in building scalable and user-friendly web applications. With experience in React, Node.js, and MongoDB, I love crafting efficient and visually appealing websites.
               </p>
               <p>
-                My journey started with Computer Engineering, where I developed an interest in web development and problem-solving. Since then, I have worked on several projects, including a table booking system BOOKMYTABLE and an AI-powered assistant Nova.
+                My journey started with Computer Engineering, where I developed an interest in web development and problem-solving. Since then, I have worked on several projects, including a table booking system BOOKMYTABLE and E-Commerce website named MOTOHUB.
               </p>
               <p>
                 I am always eager to learn new technologies and improve my skills. My goal is to build innovative solutions that enhance user experiences and solve real-world problems.
